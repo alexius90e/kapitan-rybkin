@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+html {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: $black;
+  background: url(../assets/main-bg.webp) top center no-repeat;
+  background-color: $white;
+  background-size: cover;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Lato', sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

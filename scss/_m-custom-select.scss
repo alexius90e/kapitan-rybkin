@@ -1,0 +1,144 @@
+.custom-select {
+  position: relative;
+  margin: 0;
+  width: min-content;
+  border: none;
+
+  & select {
+    display: none;
+  }
+
+  & .select-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 4px 5px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    color: $black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 32px;
+    background-color: #90afb2;
+    user-select: none;
+    cursor: pointer;
+
+    @include mobile {
+      gap: 4px;
+      padding: 2px;
+      padding-right: 5px;
+      font-size: 10px;
+    }
+
+    & > span {
+      display: inline-block;
+      padding: 4px 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-radius: 32px;
+      background-color: $white;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 9px;
+      width: 14px;
+      background-image: url(../assets/icons/arrow.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: all ease-in-out 0.1s;
+
+      @include mobile {
+        height: 8px;
+        width: 12px;
+      }
+    }
+
+    &.active {
+      color: $black;
+    }
+
+    &.active::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  & .select-hide {
+    display: none !important;
+  }
+
+  & .select-items {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    max-height: 288px;
+    min-width: max-content;
+    overflow-y: auto;
+    color: $black;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 12px;
+    background-color: $white;
+
+    @include mobile {
+      right: auto;
+      left: 2px;
+      padding: 4px;
+      font-size: 10px;
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 8px;
+      background-color: $gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: $gray;
+    }
+
+    & .same-as-selected {
+      font-weight: 600;
+    }
+
+    & div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      user-select: none;
+      cursor: pointer;
+
+      @include mobile {
+        padding: 4px 11px;
+      }
+    }
+  }
+
+  & .select-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+  }
+}
