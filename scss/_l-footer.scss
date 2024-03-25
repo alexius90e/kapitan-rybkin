@@ -1,5 +1,146 @@
 .footer {
-  & .container {
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -4px 20px 0 $orange;
 
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 65px;
+    background: linear-gradient(0deg, $blue 0%, rgba($color: $gray, $alpha: 0.4) 70%);
+
+    @include desktop {
+      gap: 10px;
+      padding: 12px 44px;
+    }
+
+    @include laptop {
+      padding: 12px 10px;
+    }
+
+    @include tablet {
+      padding: 5px 16px;
+    }
+
+    @include mobile {
+      padding: 7px 9px;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    &-link {
+      display: inline-block;
+    }
+
+    &-image {
+      display: block;
+      width: 118px;
+      max-width: 100%;
+      height: auto;
+  
+      @include tablet {
+        width: 100px;
+      }
+  
+      @include mobile {
+        width: 56px;
+      }
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &-link {
+      flex: 1 1 100px;
+      font-weight: 400;
+      font-size: 18px;
+      color: $blue;
+      text-align: center;
+
+      @include laptop {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__social {
+    flex: 0 0 356px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include laptop {
+      flex: 0 1 356px;
+    }
+
+    @include mobile {
+      gap: 10px;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      color: $blue;
+    }
+
+    &-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+
+    &-link {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: $blue;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &_inst {
+        background-image: url(../assets/icons/instagram.svg);
+      }
+
+      &_tiktok {
+        background-image: url(../assets/icons/tiktok.svg);
+      }
+    }
+  }
+
+  &__disclaimer {
+    padding: 20px;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+    color: rgba($color: $black, $alpha: 0.4);
+    background: #d9d9d9;
+
+    @include desktop {
+      padding: 15px 20px;
+      font-size: 24px;
+    }
+
+    @include tablet {
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      padding: 9px 20px;
+      font-size: 10px;
+    }
   }
 }
