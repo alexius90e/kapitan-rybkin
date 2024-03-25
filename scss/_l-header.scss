@@ -5,6 +5,7 @@
   max-width: 1920px;
   min-height: 100px;
   padding: 10px 28px;
+  margin: 0 auto;
   box-sizing: border-box;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 4px 20px 0 $orange;
@@ -72,13 +73,12 @@
       display: none;
     }
 
-
     &-link {
       flex: 0 0 auto;
       color: $orange;
       font-weight: 600;
       font-size: 18px;
-      -webkit-text-stroke: 1px $blue;
+      text-shadow: $textShadow;
 
       @media screen and (max-width: 1200px) {
         font-size: 12px;

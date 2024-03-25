@@ -1,19 +1,11 @@
-.container  {
-  max-width: 1198px;
+.container {
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   box-sizing: border-box;
 
-  @include desktop {
-    max-width: 992px;
-  }
-
   @include laptop {
-    max-width: 768px;
-  }
-
-  @include tablet {
-    max-width: 576px;
+    padding: 0;
   }
 }

@@ -6,6 +6,8 @@ $gray: #90afb2;
 $orange: #f59c12;
 $blue: #0d4a89;
 
+$textShadow: 1px 1px $blue, -1px -1px $blue, -1px 1px $blue, 1px -1px $blue;
+
 // transition
 
 $baseTransition: all ease-in-out 0.15s;

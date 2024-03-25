@@ -76,11 +76,12 @@
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
+    left: 0;
     z-index: 99;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 8px;
+    padding: 4px 5px;
     max-height: 288px;
     min-width: max-content;
     overflow-y: auto;
@@ -89,11 +90,9 @@
     font-style: normal;
     font-weight: 400;
     border-radius: 12px;
-    background-color: $white;
+    background-color: #90afb2;
 
     @include mobile {
-      right: auto;
-      left: 2px;
       padding: 4px;
       font-size: 10px;
       border-radius: 8px;
@@ -123,7 +122,10 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      padding: 8px 12px;
+      width: max-content;
+      padding: 4px 15px;
+      border-radius: 24px;
+      background-color: $white;
       user-select: none;
       cursor: pointer;
 
