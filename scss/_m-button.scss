@@ -1,6 +1,7 @@
 .button {
   position: relative;
   display: inline-block;
+  min-width: 170px;
   padding: 11px 16px;
   font-weight: 600;
   font-size: 18px;
@@ -11,14 +12,16 @@
   border-radius: 48px;
   background-color: $blue;
   box-shadow: 0 0px 16px 0 rgba($color: $orange, $alpha: 0.5);
+  cursor: pointer;
 
   @include tablet {
+    min-width: 145px;
     padding: 9px 12px;
     font-size: 14px;
   }
 
   @include mobile {
-    padding: 6px 8px;
+    padding: 7px 8px;
     font-size: 12px;
   }
 

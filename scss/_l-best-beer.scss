@@ -1,0 +1,115 @@
+.best-beer {
+  &__wrapper {
+    display: flex;
+    gap: 10px;
+    min-height: 800px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: url(../assets/best-beer-bg.webp) center no-repeat;
+    background-size: cover;
+
+    @include laptop {
+      min-height: 600px;
+    }
+
+    @include tablet {
+      min-height: 400px;
+    }
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+      min-height: 300px;
+      padding: 32px 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 1 660px;
+    padding: 10px;
+
+    @include desktop {
+      flex: 0 1 400px;
+    }
+
+    @include laptop {
+      flex: 0 1 164px;
+    }
+
+    @include mobile {
+      flex: 0 1 auto;
+      max-width: 50%;
+    }
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 36px;
+    color: $orange;
+    text-align: center;
+    text-shadow: $textShadow;
+
+    @include laptop {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 40px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    color: $orange;
+    text-align: center;
+    text-shadow: $textShadow;
+
+    @include laptop {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 10px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__map {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      max-width: 60%;
+    }
+
+    &-image {
+      width: 100%;
+      transform: scaleY(1.2);
+    }
+  }
+}
