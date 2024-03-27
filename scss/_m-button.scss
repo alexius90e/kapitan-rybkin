@@ -1,8 +1,11 @@
 .button {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 170px;
   padding: 11px 16px;
+  box-sizing: border-box;
   font-weight: 600;
   font-size: 18px;
   line-height: 100%;
