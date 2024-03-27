@@ -1,0 +1,18 @@
+.brands {
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @include mobile {
+    display: none;
+  }
+
+  &__figure {
+    &-image {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

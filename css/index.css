@@ -375,6 +375,9 @@ img {
 }
 
 .footer {
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 -4px 20px 0 #f59c12;
 }
@@ -745,4 +748,21 @@ img {
 .best-beer__map-image {
   width: 100%;
   transform: scaleY(1.2);
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  max-width: 1920px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 576px) {
+  .brands {
+    display: none;
+  }
+}
+.brands__figure-image {
+  display: block;
+  max-width: 100%;
 }
