@@ -1,0 +1,161 @@
+.contacts {
+  color: $orange;
+
+  &__wrapper {
+    padding: 20px;
+    border-radius: 20px;
+    background: url(../assets/contacts-bg.webp) center no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__locations {
+    display: flex;
+    gap: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto 10px;
+
+    @include desktop {
+      max-width: 1012px;
+    }
+
+    @include laptop {
+      max-width: 844px;
+    }
+
+    @include tablet {
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__location {
+    
+
+    @include tablet {
+      flex: 0 0 198px;
+    }
+
+    @include mobile {
+      flex: 0 0 calc(50% - 10px);
+    }
+
+    &-map {
+      margin: 0 0 5px;
+
+      & iframe {
+        max-width: 100%;
+        height: 394px;
+        width: 100%;
+        border-radius: 20px;
+
+        @include laptop {
+          height: 298px;
+        }
+
+        @include tablet {
+          height: 185px;
+        }
+
+        @include mobile {
+          height: 146px;
+        }
+      }
+    }
+
+    &-worktime {
+      margin: 0 0 5px;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+
+      @include laptop {
+        font-size: 14px;
+      }
+
+      @include tablet {
+        font-size: 10px;
+      }
+
+      @include mobile {
+        font-size: 8px;
+      }
+    }
+
+    &-address {
+      font-weight: 500;
+      font-size: 24px;
+      text-align: center;
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    @include mobile {
+      gap: 10px;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 24px;
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 10px;
+      }
+    }
+
+    &-link {
+      font-weight: 700;
+      font-size: 36px;
+      color: $orange;
+
+      @include laptop {
+        font-size: 24px;
+      }
+
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+  }
+}
