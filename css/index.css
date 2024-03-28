@@ -1155,3 +1155,121 @@ img {
     font-size: 10px;
   }
 }
+
+.cooperation {
+  text-align: center;
+  color: orange;
+}
+.cooperation__wrapper {
+  padding: 150px 40px 50px;
+  border-radius: 20px;
+  background: url(../assets/cooperation-bg.webp) center no-repeat;
+  background-size: cover;
+  background-color: #222;
+}
+@media (max-width: 992px) {
+  .cooperation__wrapper {
+    padding: 150px 34px 85px;
+  }
+}
+@media (max-width: 768px) {
+  .cooperation__wrapper {
+    padding: 90px 26px 25px;
+  }
+}
+@media (max-width: 576px) {
+  .cooperation__wrapper {
+    padding: 82px 12px 48px;
+  }
+}
+.cooperation__wrapper > * {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+}
+.cooperation__title {
+  font-size: 34px;
+  line-height: 124%;
+}
+@media (max-width: 992px) {
+  .cooperation__title {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+@media (max-width: 768px) {
+  .cooperation__title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .cooperation__title {
+    font-size: 12px;
+  }
+}
+.cooperation__text {
+  font-size: 24px;
+  line-height: 175%;
+}
+@media (max-width: 992px) {
+  .cooperation__text {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+@media (max-width: 768px) {
+  .cooperation__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .cooperation__text {
+    font-size: 10px;
+    line-height: 120%;
+  }
+}
+.cooperation__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .cooperation__contacts {
+    gap: 10px;
+  }
+}
+.cooperation__contacts-title {
+  font-weight: 500;
+  font-size: 24px;
+}
+@media (max-width: 992px) {
+  .cooperation__contacts-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .cooperation__contacts-title {
+    font-size: 10px;
+  }
+}
+.cooperation__contacts-link {
+  font-weight: 700;
+  font-size: 36px;
+  color: #f59c12;
+}
+@media (max-width: 992px) {
+  .cooperation__contacts-link {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .cooperation__contacts-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .cooperation__contacts-link {
+    font-size: 10px;
+  }
+}
