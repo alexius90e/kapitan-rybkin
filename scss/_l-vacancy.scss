@@ -19,6 +19,7 @@
     }
 
     @include tablet {
+      flex-direction: column;
       max-width: 520px;
       padding: 13px calc((100% - 520px) / 2);
     }
@@ -30,6 +31,10 @@
 
     & > * {
       flex: 0 0 calc(50% - 10px);
+
+      @include tablet {
+        flex: 0 1 auto;
+      }
     }
   }
 
@@ -42,11 +47,7 @@
     }
 
     @include tablet {
-      font-size: 10px;
-    }
-
-    @include mobile {
-      font-size: 8px;
+      margin-bottom: 24px;
     }
 
     & > * {
@@ -57,11 +58,7 @@
       }
 
       @include tablet {
-        margin-bottom: 10px;
-      }
-
-      @include mobile {
-        margin-bottom: 8px;
+        margin-bottom: 13px;
       }
     }
 
@@ -75,11 +72,7 @@
       }
 
       @include tablet {
-        font-size: 14px;
-      }
-
-      @include mobile {
-        font-size: 12px;
+        font-size: 16px;
       }
     }
 
@@ -162,7 +155,7 @@
       }
 
       @include tablet {
-        font-size: 10px;
+        font-size: 16px;
       }
     }
 
@@ -180,7 +173,7 @@
       }
 
       @include mobile {
-        font-size: 10px;
+        font-size: 16px;
       }
     }
   }
