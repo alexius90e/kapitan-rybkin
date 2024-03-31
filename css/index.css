@@ -1174,11 +1174,6 @@ img {
     font-size: 18px;
   }
 }
-@media (max-width: 576px) {
-  .cooperation__title {
-    font-size: 16px;
-  }
-}
 .cooperation__text {
   font-size: 24px;
   line-height: 175%;
@@ -1186,18 +1181,12 @@ img {
 @media (max-width: 992px) {
   .cooperation__text {
     font-size: 18px;
-    line-height: normal;
+    line-height: 150%;
   }
 }
 @media (max-width: 768px) {
   .cooperation__text {
     font-size: 14px;
-  }
-}
-@media (max-width: 576px) {
-  .cooperation__text {
-    font-size: 10px;
-    line-height: 120%;
   }
 }
 .cooperation__contacts {
@@ -1223,7 +1212,7 @@ img {
 }
 @media (max-width: 768px) {
   .cooperation__contacts-title {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .cooperation__contacts-link {
@@ -1243,7 +1232,7 @@ img {
 }
 @media (max-width: 576px) {
   .cooperation__contacts-link {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
