@@ -1,5 +1,17 @@
 import './custom-select.js';
 
+const disclaimer = document.querySelector('.disclaimer');
+
+if (disclaimer) {
+  disclaimer.addEventListener('click', (event) => {
+    const isButton = event.target.classList.contains('disclaimer__button');
+    const isButtonContent = event.target.parentNode.classList.contains('disclaimer__button');
+    if (isButton || isButtonContent) {
+      disclaimer.style.display = 'none';
+    }
+  });
+}
+
 const mainSwiper = new Swiper('.info-slider .swiper', {
   loop: true,
   spaceBetween: 32,

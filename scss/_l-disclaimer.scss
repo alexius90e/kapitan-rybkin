@@ -1,0 +1,64 @@
+.disclaimer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px;
+  background-color: #444444;
+
+  &::before {
+    content: '';
+    display: block;
+    margin: 0 0 57px;
+    width: 324px;
+    height: 280px;
+    background: url(../assets/logo-disclaimer.png) center no-repeat;
+    background-size: contain;
+
+    @include laptop {
+      width: 280px;
+      height: 240px;
+    }
+
+    @include tablet {
+      width: 210px;
+      height: 180px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #f59c12;
+
+    @include laptop {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 57px;
+    min-height: 100px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: #f59c12;
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1935,3 +1935,70 @@ img {
     border-radius: 20px;
   }
 }
+
+.disclaimer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px;
+  background-color: #444444;
+}
+.disclaimer::before {
+  content: "";
+  display: block;
+  margin: 0 0 57px;
+  width: 324px;
+  height: 280px;
+  background: url(../assets/logo-disclaimer.png) center no-repeat;
+  background-size: contain;
+}
+@media (max-width: 992px) {
+  .disclaimer::before {
+    width: 280px;
+    height: 240px;
+  }
+}
+@media (max-width: 768px) {
+  .disclaimer::before {
+    width: 210px;
+    height: 180px;
+  }
+}
+.disclaimer__title {
+  margin: 0 0 15px;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: #f59c12;
+}
+@media (max-width: 992px) {
+  .disclaimer__title {
+    font-size: 24px;
+  }
+}
+.disclaimer__text {
+  margin: 0 0 57px;
+  min-height: 100px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+  color: #f59c12;
+}
+@media (max-width: 992px) {
+  .disclaimer__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .disclaimer__text {
+    margin-bottom: 15px;
+  }
+}
