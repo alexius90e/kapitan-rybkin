@@ -10,7 +10,6 @@ const swiper = new Swiper('.info-slider  .swiper', {
 });
 
 const initialLanguage = localStorage.getItem('language');
-
 const langSelect = document.getElementById('language');
 const selectSelected = document.querySelector('#language ~ .select-selected');
 
@@ -29,3 +28,23 @@ langSelect.addEventListener('change', (event) => {
   document.body.dataset.language = event.target.value;
   localStorage.setItem('language', event.target.value);
 });
+
+const header = document.querySelector('.header');
+const headerBurger = document.querySelector('.header__burger');
+const headerNav = document.querySelector('.header__nav');
+
+if (header && headerBurger && headerNav) {
+  headerBurger.addEventListener('click', () => {
+    header.classList.add('active');
+    headerNav.classList.add('active');
+    document.body.classList.add('hidden');
+  });
+
+  header.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+      header.classList.remove('active');
+      headerNav.classList.remove('active');
+      document.body.classList.remove('hidden');
+    }
+  });
+}

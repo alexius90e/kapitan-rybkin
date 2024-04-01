@@ -18,7 +18,9 @@ body {
   background-size: cover;
 
   &.hidden {
-    overflow: hidden;
+    @include laptop {
+      overflow: hidden;
+    }
   }
 }
 

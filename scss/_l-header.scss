@@ -28,6 +28,20 @@
     padding: 10px;
   }
 
+  &.active::before {
+    @include laptop {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 400;
+      background-color: rgba($color: $black, $alpha: 0.5);
+      backdrop-filter: blur(10px);
+    }
+  }
+
   &__logo {
     flex: 0 0 auto;
 
@@ -70,7 +84,55 @@
     }
 
     @include laptop {
-      display: none;
+      position: fixed;
+      top: 130px;
+      left: 50%;
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 369px;
+      padding: 170px 60px 60px;
+      box-sizing: border-box;
+      box-shadow: 0 -4px 20px 0 #f59c12;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #90afb2 0%, #0d4a89 44.54%, #0d4a89 98.4%);
+      transform: translateX(-50%) translateY(-120vh);
+      transition: transform ease-in-out 0.2s;
+      will-change: transform;
+    }
+
+    @include mobile {
+      top: 90px;
+      max-width: 360px;
+      min-width: 290px;
+      width: calc(100% - 40px);
+      padding: 130px 20px 30px;
+    }
+
+    &:before {
+      @include laptop {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 60px;
+        display: block;
+        width: 117px;
+        height: 100px;
+        background: url(../assets/logo-footer.webp) center no-repeat;
+        background-size: contain;
+      }
+
+      @include mobile {
+        top: 20px;
+        left: 20px;
+      }
+    }
+
+    &.active {
+      @include laptop {
+        transform: translateX(-50%) translateY(0);
+      }
     }
 
     &-link {
@@ -82,6 +144,11 @@
 
       @media screen and (max-width: 1200px) {
         font-size: 12px;
+      }
+
+      @include laptop {
+        font-size: 16px;
+        text-shadow: none;
       }
     }
 
