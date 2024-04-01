@@ -1,0 +1,20 @@
+.what-else {
+  & .container {
+    max-width: 1920px;
+    padding: 0;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #f59c12;
+    text-align: center;
+    text-shadow: $textShadow;
+
+    @include laptop {
+      font-size: 18px;
+      border-radius: 20px;
+    }
+  }
+}

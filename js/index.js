@@ -1,11 +1,37 @@
 import './custom-select.js';
 
-const swiper = new Swiper('.info-slider  .swiper', {
+const mainSwiper = new Swiper('.info-slider .swiper', {
   loop: true,
   spaceBetween: 32,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+});
+
+const whatElseSwiper = new Swiper('.what-else .swiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 5,
+  breakpoints: {
+    360: {
+      slidesPerView: 1.25,
+    },
+    480: {
+      slidesPerView: 1.5,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2.4,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 3.4,
+    },
   },
 });
 
