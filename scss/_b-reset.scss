@@ -22,6 +22,14 @@ body {
   }
 }
 
+body[data-language='ru'] .en {
+  display: none;
+}
+
+body[data-language='en'] .ru {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
