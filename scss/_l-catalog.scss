@@ -1,3 +1,270 @@
 .catalog {
-  
+  &__wrapper {
+    position: relative;
+    border-radius: 20px;
+    background: url(../assets/best-beer-bg.webp) center no-repeat;
+    background-size: cover;
+
+    @include mobile {
+      padding: 28px;
+    }
+  }
+
+  &__map {
+    @include mobile {
+      max-width: 420px;
+      margin: 0 auto 20px;
+    }
+
+    &-image {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__countries {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px 56px;
+    margin: 0 auto;
+
+    @include mobile {
+      max-width: 300px;
+    }
+
+    &.active::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 400;
+      background-color: rgba($color: $black, $alpha: 0.5);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  &__country {
+    position: absolute;
+    z-index: 100;
+    transform: translateX(-50%) translateY(-50%);
+
+    @include mobile {
+      position: static;
+      transform: none;
+    }
+
+    &_mexico {
+      top: 56%;
+      left: 18%;
+    }
+
+    &_france {
+      top: 48%;
+      left: 48%;
+    }
+
+    &_belgium {
+      top: 45%;
+      left: 51%;
+    }
+
+    &_germany {
+      top: 42%;
+      left: 53.5%;
+    }
+
+    &_czech {
+      top: 43.5%;
+      left: 56%;
+    }
+
+    &_slovakia {
+      top: 48%;
+      left: 56%;
+    }
+
+    &_belarus {
+      top: 43%;
+      left: 59%;
+    }
+
+    &_russia {
+      top: 35%;
+      left: 69%;
+    }
+
+    &_kazakhstan {
+      top: 46%;
+      left: 67%;
+    }
+
+    &-icon {
+      height: 30px;
+      width: 30px;
+      transition: transform ease-in-out 0.2s;
+      will-change: transform;
+      cursor: pointer;
+
+      @include desktop {
+        height: 20px;
+        width: 20px;
+      }
+
+      @include laptop {
+        height: 16px;
+        width: 16px;
+      }
+
+      @include tablet {
+        height: 14px;
+        width: 14px;
+      }
+
+      @include mobile {
+        height: 36px;
+        width: 36px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+
+      &-image {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  &__card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 500;
+    padding: 20px;
+    display: none;
+    max-width: 304px;
+    max-height: 90vh;
+    width: 100%;
+    border: 1px solid #0d4a89;
+    border-radius: 0 20px 20px 20px;
+    box-shadow: 0 4px 20px 0 rgba(245, 156, 18, 0.5);
+    background: #0d4a89;
+    transform: translateX(-50%) translateY(-50%);
+
+    &.active {
+      display: block;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: calc(90vh - 40px);
+      padding-right: 5px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba($color: $white, $alpha: 0.1);
+        border-radius: 10px;
+      }
+
+      &-title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        color: #f59c12;
+      }
+
+      &-beer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-left: 22px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #f59c12;
+        cursor: pointer;
+
+        &:has(.catalog__card-info-beer-image) {
+          padding-left: 0;
+        }
+
+        &-image {
+          flex: 0 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__producer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 500;
+    padding: 20px;
+    display: none;
+    max-width: calc(100vw - 40px);
+    max-height: 90vh;
+    width: 360px;
+    border: 1px solid #0d4a89;
+    border-radius: 0 20px 20px 20px;
+    box-shadow: 0 4px 20px 0 rgba(245, 156, 18, 0.5);
+    background: #0d4a89;
+    transform: translateX(-50%) translateY(-50%);
+
+    &.active {
+      display: block;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: calc(90vh - 40px);
+      padding-right: 5px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba($color: $white, $alpha: 0.1);
+        border-radius: 10px;
+      }
+
+      &-title {
+        margin: 0 0 5px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #f59c12;
+      }
+
+      &-text {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: #f59c12;
+      }
+    }
+  }
 }

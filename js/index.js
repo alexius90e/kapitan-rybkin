@@ -13,6 +13,9 @@ const whatElseSwiper = new Swiper('.what-else .swiper', {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 5,
+  autoplay: {
+    delay: 2000,
+  },
   breakpoints: {
     360: {
       slidesPerView: 1.25,
@@ -74,3 +77,50 @@ if (header && headerBurger && headerNav) {
     }
   });
 }
+
+const catalogCountriesWrapper = document.querySelector('.catalog__countries');
+const catalogCountries = document.querySelectorAll('.catalog__country');
+const catalogCards = document.querySelectorAll('.catalog__card');
+const catalogBeerInfoCards = document.querySelectorAll('.catalog__card-info-beer');
+const catalogProducers = document.querySelectorAll('.catalog__producer');
+
+if (catalogCountriesWrapper) {
+  catalogCountriesWrapper.addEventListener('click', (event) => {
+    if (event.currentTarget === event.target) {
+      event.currentTarget.classList.remove('active');
+      [...catalogCards, ...catalogProducers].forEach((card) => {
+        card.classList.remove('active');
+      });
+    }
+  });
+}
+
+catalogCountries.forEach((catalogCountry) => {
+  catalogCountry.addEventListener('click', (event) => {
+    const activeCatalogCard = [...catalogCards].find(
+      (card) => card.dataset.country === event.currentTarget.dataset.country
+    );
+    if (activeCatalogCard && catalogCountriesWrapper) {
+      catalogCountriesWrapper.classList.add('active');
+      activeCatalogCard.classList.add('active');
+      [...catalogProducers].forEach((card) => {
+        card.classList.remove('active');
+      });
+    }
+  });
+});
+
+catalogBeerInfoCards.forEach((catalogBeerInfoCard) => {
+  catalogBeerInfoCard.addEventListener('click', (event) => {
+    const activeCatalogProducer = [...catalogProducers].find(
+      (card) => card.dataset.producer === event.currentTarget.dataset.producer
+    );
+    if (activeCatalogProducer && catalogCountriesWrapper) {
+      catalogCountriesWrapper.classList.add('active');
+      activeCatalogProducer.classList.add('active');
+      [...catalogCards].forEach((card) => {
+        card.classList.remove('active');
+      });
+    }
+  });
+});

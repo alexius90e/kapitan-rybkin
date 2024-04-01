@@ -1674,6 +1674,249 @@ img {
   }
 }
 
+.catalog__wrapper {
+  position: relative;
+  border-radius: 20px;
+  background: url(../assets/best-beer-bg.webp) center no-repeat;
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  .catalog__wrapper {
+    padding: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .catalog__map {
+    max-width: 420px;
+    margin: 0 auto 20px;
+  }
+}
+.catalog__map-image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.catalog__countries {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px 56px;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .catalog__countries {
+    max-width: 300px;
+  }
+}
+.catalog__countries.active::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 400;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.catalog__country {
+  position: absolute;
+  z-index: 100;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (max-width: 576px) {
+  .catalog__country {
+    position: static;
+    transform: none;
+  }
+}
+.catalog__country_mexico {
+  top: 56%;
+  left: 18%;
+}
+.catalog__country_france {
+  top: 48%;
+  left: 48%;
+}
+.catalog__country_belgium {
+  top: 45%;
+  left: 51%;
+}
+.catalog__country_germany {
+  top: 42%;
+  left: 53.5%;
+}
+.catalog__country_czech {
+  top: 43.5%;
+  left: 56%;
+}
+.catalog__country_slovakia {
+  top: 48%;
+  left: 56%;
+}
+.catalog__country_belarus {
+  top: 43%;
+  left: 59%;
+}
+.catalog__country_russia {
+  top: 35%;
+  left: 69%;
+}
+.catalog__country_kazakhstan {
+  top: 46%;
+  left: 67%;
+}
+.catalog__country-icon {
+  height: 30px;
+  width: 30px;
+  transition: transform ease-in-out 0.2s;
+  will-change: transform;
+  cursor: pointer;
+}
+@media (max-width: 1280px) {
+  .catalog__country-icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .catalog__country-icon {
+    height: 16px;
+    width: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__country-icon {
+    height: 14px;
+    width: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .catalog__country-icon {
+    height: 36px;
+    width: 36px;
+  }
+}
+.catalog__country-icon:hover {
+  transform: scale(1.2);
+}
+.catalog__country-icon:active {
+  transform: scale(1);
+}
+.catalog__country-icon-image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.catalog__card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 500;
+  padding: 20px;
+  display: none;
+  max-width: 304px;
+  max-height: 90vh;
+  width: 100%;
+  border: 1px solid #0d4a89;
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 0 4px 20px 0 rgba(245, 156, 18, 0.5);
+  background: #0d4a89;
+  transform: translateX(-50%) translateY(-50%);
+}
+.catalog__card.active {
+  display: block;
+}
+.catalog__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(90vh - 40px);
+  padding-right: 5px;
+  overflow: auto;
+}
+.catalog__card-info::-webkit-scrollbar {
+  width: 4px;
+}
+.catalog__card-info::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.catalog__card-info-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #f59c12;
+}
+.catalog__card-info-beer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 22px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #f59c12;
+  cursor: pointer;
+}
+.catalog__card-info-beer:has(.catalog__card-info-beer-image) {
+  padding-left: 0;
+}
+.catalog__card-info-beer-image {
+  flex: 0 0 auto;
+  display: block;
+}
+.catalog__producer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 500;
+  padding: 20px;
+  display: none;
+  max-width: calc(100vw - 40px);
+  max-height: 90vh;
+  width: 360px;
+  border: 1px solid #0d4a89;
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 0 4px 20px 0 rgba(245, 156, 18, 0.5);
+  background: #0d4a89;
+  transform: translateX(-50%) translateY(-50%);
+}
+.catalog__producer.active {
+  display: block;
+}
+.catalog__producer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(90vh - 40px);
+  padding-right: 5px;
+  overflow: auto;
+}
+.catalog__producer-info::-webkit-scrollbar {
+  width: 4px;
+}
+.catalog__producer-info::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.catalog__producer-info-title {
+  margin: 0 0 5px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #f59c12;
+}
+.catalog__producer-info-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #f59c12;
+}
+
 .what-else .container {
   max-width: 1920px;
   padding: 0;
