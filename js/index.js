@@ -12,6 +12,28 @@ if (disclaimer) {
   });
 }
 
+const brandsSwiper = new Swiper('.brands .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 2000,
+  },
+  breakpoints: {
+    360: {
+      slidesPerView: 4,
+    },
+    576: {
+      slidesPerView: 5,
+    },
+    680: {
+      slidesPerView: 7,
+    },
+    768: {
+      slidesPerView: 9,
+    },
+  },
+});
+
 const mainSwiper = new Swiper('.info-slider .swiper', {
   loop: true,
   spaceBetween: 32,

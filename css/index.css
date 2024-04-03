@@ -846,17 +846,11 @@ img {
 }
 
 .brands {
-  display: flex;
-  align-items: center;
   max-width: 1920px;
   margin: 0 auto;
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
-}
-@media (max-width: 576px) {
-  .brands {
-    display: none;
-  }
 }
 .brands__figure-image {
   display: block;
@@ -1949,6 +1943,7 @@ img {
   flex-direction: column;
   padding: 32px;
   background-color: #444444;
+  display: none;
 }
 .disclaimer::before {
   content: "";
