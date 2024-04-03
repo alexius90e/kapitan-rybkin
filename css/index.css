@@ -399,7 +399,7 @@ img {
 }
 @media screen and (max-width: 1200px) {
   .header__nav-link {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 992px) {
@@ -531,7 +531,7 @@ img {
   color: #0d4a89;
   text-align: center;
 }
-@media (max-width: 992px) {
+@media (max-width: 1280px) {
   .footer__nav-link {
     font-size: 14px;
   }

@@ -71,7 +71,7 @@
       color: $blue;
       text-align: center;
 
-      @include laptop {
+      @include desktop {
         font-size: 14px;
       }
     }
