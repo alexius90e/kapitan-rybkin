@@ -23,6 +23,72 @@
     }
   }
 
+  &__info {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 350px;
+    text-align: center;
+    color: #f59c12;
+    text-shadow: $textShadow;
+
+    @include desktop {
+      width: auto;
+    }
+
+    @include laptop {
+      top: 30px;
+      right: 15px;
+    }
+
+    @include mobile {
+      position: static;
+      margin: 32px 0 0 ;
+      text-shadow: none;
+    }
+
+
+    &-title {
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 24px;
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
+  
+  
+    }
+
+    &-description {
+      margin: 0;
+      font-weight: 400;
+      font-size: 18px;
+
+      @include laptop {
+        font-size: 16px;
+      }
+
+      @include tablet {
+        font-size: 12px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 300%;
+      }
+  
+    }
+  }
+
   &__countries {
     display: flex;
     align-items: center;
