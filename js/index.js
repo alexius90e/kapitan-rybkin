@@ -41,6 +41,9 @@ const mainSwiper = new Swiper('.info-slider .swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  pagination: {
+    el: '.swiper-pagination',
+  },
 });
 
 const whatElseSwiper = new Swiper('.what-else .swiper', {

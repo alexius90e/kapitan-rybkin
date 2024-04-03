@@ -627,6 +627,25 @@ img {
 .info-slider .swiper-button-next {
   transform: rotate(180deg);
 }
+.info-slider .swiper-pagination {
+  display: none;
+}
+@media (max-width: 576px) {
+  .info-slider .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+}
+.info-slider .swiper-pagination-bullet {
+  margin: 0;
+  background-color: #0d4a89;
+  opacity: 1;
+}
+.info-slider .swiper-pagination-bullet-active {
+  background-color: #f59c12;
+}
 .info-slider__slide {
   display: flex;
   flex-direction: column;
