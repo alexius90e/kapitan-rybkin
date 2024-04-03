@@ -1,0 +1,45 @@
+.activities-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  display: none;
+  background-color: rgba($color: $black, $alpha: 0.25);
+  backdrop-filter: blur(10px);
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    position: relative;
+    max-height: 90vh;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    background-image: linear-gradient(
+      90deg,
+      $blue 0%,
+      $blue 20%,
+      #326fab 50%,
+      $blue 80%,
+      $blue 100%
+    );
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: url(../assets/modal-bg.png) center no-repeat;
+      background-size: cover;
+    }
+  }
+}

@@ -161,3 +161,18 @@ catalogBeerInfoCards.forEach((catalogBeerInfoCard) => {
     }
   });
 });
+
+const actualActivitiesButtons = document.querySelectorAll('.actual-activities-button');
+const activitiesModal = document.querySelector('.activities-modal');
+
+actualActivitiesButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (activitiesModal) activitiesModal.classList.add('active');
+  });
+});
+
+if (activitiesModal) {
+  activitiesModal.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) event.currentTarget.classList.remove('active');
+  });
+}
