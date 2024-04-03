@@ -1233,16 +1233,24 @@ img {
 }
 @media (max-width: 992px) {
   .cooperation__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 286px);
     padding: 150px 34px 85px;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 768px) {
   .cooperation__wrapper {
+    min-height: calc(100vh - 258px);
     padding: 90px 26px 25px;
   }
 }
 @media (max-width: 576px) {
   .cooperation__wrapper {
+    min-height: calc(100vh - 160px);
     padding: 82px 12px 48px;
   }
 }
