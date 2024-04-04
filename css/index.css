@@ -2034,7 +2034,6 @@ img {
   flex-direction: column;
   padding: 32px;
   background-color: #444444;
-  display: none;
 }
 .disclaimer::before {
   content: "";
