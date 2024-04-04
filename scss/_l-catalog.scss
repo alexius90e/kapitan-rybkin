@@ -33,20 +33,16 @@
     text-shadow: $textShadow;
 
     @include desktop {
-      width: auto;
-    }
-
-    @include laptop {
       top: 30px;
       right: 15px;
+      width: auto;
     }
 
     @include mobile {
       position: static;
-      margin: 32px 0 0 ;
+      margin: 32px 0 0;
       text-shadow: none;
     }
-
 
     &-title {
       margin: 0 0 10px;
@@ -64,8 +60,6 @@
       @include mobile {
         font-size: 18px;
       }
-  
-  
     }
 
     &-description {
@@ -85,7 +79,6 @@
         font-size: 14px;
         line-height: 300%;
       }
-  
     }
   }
 

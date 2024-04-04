@@ -1728,13 +1728,9 @@ img {
 }
 @media (max-width: 1280px) {
   .catalog__info {
-    width: auto;
-  }
-}
-@media (max-width: 992px) {
-  .catalog__info {
     top: 30px;
     right: 15px;
+    width: auto;
   }
 }
 @media (max-width: 576px) {
